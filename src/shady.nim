@@ -617,7 +617,7 @@ proc toCodeTopLevel(topLevelNode: NimNode, res: var string, level = 0) =
     of nnkSym:
       discard
     of nnkFormalParams:
-      ## Main function parameters are different in they they go in as globals.
+      ## Main function parameters are different in that they go in as globals.
       for param in n:
         if param.kind != nnkEmpty:
           if param[0].strVal in ["gl_FragColor", "gl_Position"]:
