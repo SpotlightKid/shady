@@ -1,6 +1,9 @@
 ## Shader macro, converts Nim code into GLSL
 
-import macros, pixie, strutils, tables, vmath
+import std/[macros, strutils, tables]
+
+import pixie
+import vmath
 from chroma import ColorRGBX
 
 var useResult {.compiletime.}: bool
